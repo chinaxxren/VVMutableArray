@@ -15,6 +15,9 @@
 		B903243622C62102002EFAA3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B903243522C62102002EFAA3 /* main.m */; };
 		B903244022C62102002EFAA3 /* VVMutableArrayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B903243F22C62102002EFAA3 /* VVMutableArrayTests.m */; };
 		B903244B22C62102002EFAA3 /* VVMutableArrayUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B903244A22C62102002EFAA3 /* VVMutableArrayUITests.m */; };
+		B903245D22C62131002EFAA3 /* VVMutableArray.m in Sources */ = {isa = PBXBuildFile; fileRef = B903245B22C62131002EFAA3 /* VVMutableArray.m */; };
+		B903245E22C62131002EFAA3 /* VVArrayTarget.m in Sources */ = {isa = PBXBuildFile; fileRef = B903245C22C62131002EFAA3 /* VVArrayTarget.m */; };
+		C3AE64547345F4A8A4799B0F /* NSArray+Weak.m in Sources */ = {isa = PBXBuildFile; fileRef = C3AE686DD866E983845B20D1 /* NSArray+Weak.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,12 @@
 		B903244622C62102002EFAA3 /* VVMutableArrayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VVMutableArrayUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B903244A22C62102002EFAA3 /* VVMutableArrayUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VVMutableArrayUITests.m; sourceTree = "<group>"; };
 		B903244C22C62102002EFAA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B903245922C62131002EFAA3 /* VVMutableArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VVMutableArray.h; sourceTree = "<group>"; };
+		B903245A22C62131002EFAA3 /* VVArrayTarget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VVArrayTarget.h; sourceTree = "<group>"; };
+		B903245B22C62131002EFAA3 /* VVMutableArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VVMutableArray.m; sourceTree = "<group>"; };
+		B903245C22C62131002EFAA3 /* VVArrayTarget.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VVArrayTarget.m; sourceTree = "<group>"; };
+		C3AE62DF521C2E0A3053A9F1 /* NSArray+Weak.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Weak.h"; sourceTree = "<group>"; };
+		C3AE686DD866E983845B20D1 /* NSArray+Weak.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Weak.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +110,7 @@
 		B903242522C62101002EFAA3 /* VVMutableArray */ = {
 			isa = PBXGroup;
 			children = (
+				B903245822C62131002EFAA3 /* Source */,
 				B903242622C62101002EFAA3 /* AppDelegate.h */,
 				B903242722C62101002EFAA3 /* AppDelegate.m */,
 				B903242922C62101002EFAA3 /* ViewController.h */,
@@ -130,6 +140,19 @@
 				B903244C22C62102002EFAA3 /* Info.plist */,
 			);
 			path = VVMutableArrayUITests;
+			sourceTree = "<group>";
+		};
+		B903245822C62131002EFAA3 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				B903245922C62131002EFAA3 /* VVMutableArray.h */,
+				B903245B22C62131002EFAA3 /* VVMutableArray.m */,
+				B903245A22C62131002EFAA3 /* VVArrayTarget.h */,
+				B903245C22C62131002EFAA3 /* VVArrayTarget.m */,
+				C3AE686DD866E983845B20D1 /* NSArray+Weak.m */,
+				C3AE62DF521C2E0A3053A9F1 /* NSArray+Weak.h */,
+			);
+			path = Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,9 +285,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B903245E22C62131002EFAA3 /* VVArrayTarget.m in Sources */,
+				B903245D22C62131002EFAA3 /* VVMutableArray.m in Sources */,
 				B903242B22C62101002EFAA3 /* ViewController.m in Sources */,
 				B903243622C62102002EFAA3 /* main.m in Sources */,
 				B903242822C62101002EFAA3 /* AppDelegate.m in Sources */,
+				C3AE64547345F4A8A4799B0F /* NSArray+Weak.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,6 +462,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = D8RJFY6RH2;
 				INFOPLIST_FILE = VVMutableArray/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -452,6 +479,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = D8RJFY6RH2;
 				INFOPLIST_FILE = VVMutableArray/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

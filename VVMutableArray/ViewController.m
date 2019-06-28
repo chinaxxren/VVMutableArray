@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "VVMutableArray.h"
 
 @interface ViewController ()
 
@@ -16,7 +17,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
+    VVMutableArray *array = [VVMutableArray new];
+
+    [array addObject:@"1"];
+    [array addObject:@"2"];
+    [array addObject:@"3"];
+
+    for (NSString *text in array) {
+        NSLog(@"%@", text);
+    }
+
+    NSLog(@"%@", array[1]);
 }
 
 
