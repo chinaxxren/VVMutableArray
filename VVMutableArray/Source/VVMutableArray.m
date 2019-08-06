@@ -28,7 +28,7 @@ static void *VVArrayKeyPathContext = &VVArrayKeyPathContext;
     if (self) {
         self.target = [[VVArrayTarget alloc] init];
         self.keyPath = @"items";
-
+        
         [self registerKVO];
     }
 

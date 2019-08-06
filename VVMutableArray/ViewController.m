@@ -19,7 +19,7 @@
     [super viewDidLoad];
 
     VVMutableArray *array = [VVMutableArray new];
-
+    
     [array addObject:@"1"];
     [array addObject:@"2"];
     [array addObject:@"3"];
@@ -29,6 +29,10 @@
     }
 
     NSLog(@"%@", array[1]);
+    
+    // 官方支持的kvo
+    NSMutableArray *mutArray = [NSMutableArray new];
+    [[mutArray mutableArrayValueForKey:@"itmes"] addObject:@"a"];
 }
 
 
